@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- this is comment -->
+    <style>
+        .seekbar-container {
+            height: 5px;
+            background: #e6e6e6;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .seekbar-container div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #673AB7;
+            border-radius: 8px;
+        }
+        .seekbar-container div:before {
+            content: "";
+            background: gold;
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            right: -3px;
+            box-shadow: 0 3px 6px rgba(0,0,0,.16);
+            top: -3px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s;
+			overflow: hidden;
+        }
+
+        .seekbar-container:hover div:before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body style="margin-left: 100px;">
+    <style>
+        .pause{display: none;}
+        .my-player.playing .pause{display: inline-block;}
+        .my-player.playing .play{display: none;}
+    </style>
+    <div class="my-player">
+        <audio controls muted src="Moein Z - Donbale Khodam Migardam (128).mp3" id="player"></audio>
+        <button type="button" class="play">play</button>
+        <button type="button" class="pause">pause</button>
+        <button type="button" class="mute">mute</button>
+        <p class="current">00:00</p>
+        <p class="duration">00:00</p>
+        <p class="seekbar">0%</p>
+        <div class="seekbar-container">
+            <div></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        console.log( 'This is html console log' );
+    </script>
+</body>
+</html>
