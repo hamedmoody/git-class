@@ -98,6 +98,7 @@ btn_mute.addEventListener( 'click', function(){
 } );
 function my_work(){
     confirm('how Are you')
+    prompt('hello')
 }
 console.log("ok git");
 
