@@ -96,6 +96,9 @@ btn_mute.addEventListener( 'click', function(){
     //     player.muted = true;
     // }
 } );
+function my_work(){
+    confirm('how Are you')
+}
 console.log("ok git");
 
 console.log( 'this second commit for js file' );
